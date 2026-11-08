@@ -20,4 +20,9 @@ class CalculadoraServiceTest {
     void deveImpedirDivisaoPorZero() {
         assertThrows(DivisaoPorZeroException.class, () -> calculadora.dividir(10, 0));
     }
+
+    @Test
+    void deveDividirPorNumeroNegativo() {
+        assertEquals(-2.5, calculadora.dividir(5, -2));
+    }
 }
